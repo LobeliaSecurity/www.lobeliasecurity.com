@@ -15,7 +15,7 @@ class QueryWalker {
       let elements = selectorTarget.querySelectorAll(selector);
       for (let e of elements) {
         try {
-          this.oDict[selector](e);
+          await this.oDict[selector](e);
         } catch (ex) {
           console.warn("QueryWalker |", ex);
         }
