@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        [container] {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            -webkit-transform: translateY(-50%) translateX(-50%);
+        }
+
+        [out] {
+            font-weight: bold;
+        }
+
+        input {
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div container>
+        <h1 out></h1>
+        <div>
+            <div>
+                <input id="B24" type="checkbox" value="8388608">
+                <input id="B23" type="checkbox" value="4194304">
+                <input id="B22" type="checkbox" value="2097152">
+                <input id="B21" type="checkbox" value="1048576">
+                <input id="B20" type="checkbox" value="524288">
+                <input id="B19" type="checkbox" value="262144">
+                <input id="B18" type="checkbox" value="131072">
+                <input id="B17" type="checkbox" value="65536">
+            </div>
+            <div>
+                <input id="B16" type="checkbox" value="32768">
+                <input id="B15" type="checkbox" value="16384">
+                <input id="B14" type="checkbox" value="8192">
+                <input id="B13" type="checkbox" value="4096">
+                <input id="B12" type="checkbox" value="2048">
+                <input id="B11" type="checkbox" value="1024">
+                <input id="B10" type="checkbox" value="512">
+                <input id="B09" type="checkbox" value="256">
+            </div>
+            <div>
+                <input id="B08" type="checkbox" value="128">
+                <input id="B07" type="checkbox" value="64">
+                <input id="B06" type="checkbox" value="32">
+                <input id="B05" type="checkbox" value="16">
+                <input id="B04" type="checkbox" value="8">
+                <input id="B03" type="checkbox" value="4">
+                <input id="B02" type="checkbox" value="2">
+                <input id="B01" type="checkbox" value="1">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script defer>
+    class QueryWalker {
+        constructor(oDict, rootElement) {
+            this.oDict = oDict;
+            this.rootElement = rootElement;
+        }
+
+        async do(selectorTarget) {
+            if (!selectorTarget) {
+                selectorTarget = this.rootElement;
+            }
+            for (let selector in this.oDict) {
+                let elements = selectorTarget.querySelectorAll(selector);
+                for (let e of elements) {
+                    try {
+                        await this.oDict[selector](e);
+                    } catch (ex) {
+                        console.warn("QueryWalker |", ex);
+                    }
+                }
+            }
+        }
+    }
+    {
+        (async () => {
+            log = console.log;
+            let getRandomInt = (min, max) => {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min) + min);
+            }
+
+            (new QueryWalker({
+                "[container]": async (e) => {
+                    let out = document.querySelector("[out]");
+                    let inputs = e.querySelectorAll("input");
+
+                    let calc = (event) => {
+                        out.textContent = `#${("000000" + [...inputs]
+                            .filter(_ => { return _.checked })
+                            .map(_ => { return Number(_.value) })
+                            .reduce((sum, element) => {
+                                return sum + element;
+                            }, 0).toString(16).toUpperCase()).substr(-6)}`;
+
+                        // out.style.color = out.textContent;
+                        // document.body.style.backgroundColor = `#${("000000" + [...inputs]
+                        //     .filter(_ => { return !_.checked })
+                        //     .map(_ => { return Number(_.value) })
+                        //     .reduce((sum, element) => {
+                        //         return sum + element;
+                        //     }, 0).toString(16).toUpperCase()).substr(-6)}`;
+                        // e.style.top = `${getRandomInt(20, 80)}%`;
+                        // e.style.left = `${getRandomInt(20, 80)}%`;
+                    };
+
+                    [...inputs].forEach(_ => {
+                        _.addEventListener("click", calc);
+                    });
+                    [...inputs].forEach(_ => {
+                        _.addEventListener("mouseover", calc);
+                    });
+                    calc(new Event("mouseover"))
+                }
+            }, document)).do();
+        })();
+    }
+</script>
