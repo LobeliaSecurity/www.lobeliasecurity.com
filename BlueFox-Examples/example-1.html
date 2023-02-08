@@ -28,7 +28,7 @@
     <div container>
         <h1 out></h1>
         <div>
-            <div>
+            <!-- <div>
                 <input id="B24" type="checkbox" value="8388608">
                 <input id="B23" type="checkbox" value="4194304">
                 <input id="B22" type="checkbox" value="2097152">
@@ -47,7 +47,7 @@
                 <input id="B11" type="checkbox" value="1024">
                 <input id="B10" type="checkbox" value="512">
                 <input id="B09" type="checkbox" value="256">
-            </div>
+            </div> -->
             <div>
                 <input id="B08" type="checkbox" value="128">
                 <input id="B07" type="checkbox" value="64">
@@ -107,7 +107,7 @@
                             .map(_ => { return Number(_.value) })
                             .reduce((sum, element) => {
                                 return sum + element;
-                            }, 0).toString(16).toUpperCase()).substr(-6)}`;
+                            }, 0).toString(16).toUpperCase()).substr(-2)}`;
 
                         // out.style.color = out.textContent;
                         // document.body.style.backgroundColor = `#${("000000" + [...inputs]
