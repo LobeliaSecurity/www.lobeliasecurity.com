@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title capture="#title">LobeliaSecurity™</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="LobeliaSecurity™">
+    <meta name="keywords" content="LobeliaSecurity™">
+    <meta property="og:url" content="https://www.lobeliasecurity.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LobeliaSecurity™" />
+    <meta property="og:description" content="LobeliaSecurity™" />
+    <meta property="og:site_name" content="LobeliaSecurity™" />
+    <meta property="og:image" content="https://www.lobeliasecurity.com/media/lobeliaSecurityIllust.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="/css/index.css" />
+
+    <!-- UIkit -->
+    <link rel="stylesheet" href="/modules/uikit/css/uikit.min.css" />
+    <script src="/modules/uikit/js/uikit.min.js" defer></script>
+    <script src="/modules/uikit/js/uikit-icons.min.js" defer></script>
+    <!-- Anime -->
+    <script src="/js/anime.awaitable.js" type="module" defer></script>
+
+    <script src="/js/query-walker.js" defer></script>
+    <script src="/js/sync-view.js" defer></script>
+
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+    <div id="loading" class="uk-text-center">
+        <div class="uk-section uk-section-large">
+            <div class="uk-container uk-container-small">
+                <div>
+                    <img async-src="/media/logo.png" width="250" height="250">
+                </div>
+                <div>
+                    <img async-src="/media/lobeliaSecurityIllust.png" width="250" height="250">
+                    <div>Hi 👋, We're Lobelia Security.</div>
+                    <div>... and Lobelia Technologies.</div>
+                </div>
+            </div>
+        </div>
+        <div id="wave">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(255, 255, 255)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(237, 191, 114)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgb(85, 139, 203)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(164, 75, 55)" />
+                </g>
+            </svg>
+            <div class="bg-wave"></div>
+        </div>
+    </div>
+
+    <div constHide>
+        <input type="text" value="About" id="menuControll">
+        <select id="title" sync sync-to-this sync-to-property="value" sync-from="#menuControll"
+            sync-from-property="value" sync-event='["sync","change"]'>
+            <option value="About">LobeliaSecurity™ | About</option>
+            <option value="Work">LobeliaSecurity™ | Work</option>
+            <option value="Products">LobeliaSecurity™ | Products</option>
+            <option value="Company">LobeliaSecurity™ | Company</option>
+        </select>
+    </div>
+
+    <div id="view">
+        <div>
+            <div class="uk-child-width-expand@m uk-padding-small" uk-grid>
+                <div>
+                    <div>
+                        <h2 class="uk-margin-remove" capture="#title"></h2>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-right uk-flex-middle">
+                        <active></active>
+                        <div class="uk-padding-small">
+                            <a href="#About" class="uk-button uk-button-text" value="About"
+                                setValueOnClick="#menuControll">About</a>
+                        </div>
+                        <div class="uk-padding-small">
+                            <a href="#Work" class="uk-button uk-button-text" value="Work"
+                                setValueOnClick="#menuControll">Work</a>
+                        </div>
+                        <div class="uk-padding-small">
+                            <a href="#Products" class="uk-button uk-button-text" value="Products"
+                                setValueOnClick="#menuControll">Products</a>
+                        </div>
+                        <div class="uk-padding-small">
+                            <a href="#Company" class="uk-button uk-button-text" value="Company"
+                                setValueOnClick="#menuControll">Company</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="border">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div>
+            <div showWhenSome="#menuControll" showWhenSome-values='["About"]'>
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="About"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">Hi 👋, We're LobeliaSecurity™</h2>
+                                        <p class="uk-text-meta">We shall play evil for security.</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/lobeliaSecurityIllust.png" width="250"
+                                                height="250">
+                                        </div>
+                                        <p>
+                                            We developing normally harmless applications using technologies
+                                            such as Automation, AI, and Web, Networking, etc.
+                                            And We focusing that can be repurposed into
+                                            cyber-weapons that can be deployed immediatelyanywhere and have low
+                                            training costs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div showWhenSome="#menuControll" showWhenSome-values='["Work"]'>
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="Work"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">Neutralize stolen information</h2>
+                                        <p class="uk-text-meta">Information leak detection and exfiltration.</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/amz.png" width="250">
+
+                                        </div>
+                                        <p>
+                                            We sometimes engage in exploitative activities against spam that targets the
+                                            general public, both for fun and profit. Stole stolen information, notify
+                                            victims to take action, and try to neutralize information.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div showWhenSome="#menuControll" showWhenSome-values='["Products"]'>
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="Products"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">Protect your time</h2>
+                                        <p class="uk-text-meta">BlueFox automation.</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/BlueFox.png" width="250">
+                                        </div>
+                                        <p>
+                                            BlueFox is a web automation tools being developed with a focusing to
+                                            repurposing several security related tools.
+
+                                            BlueFox makes your test definitions highly available and portable,
+                                            taking your productivity to the next level.
+                                        </p>
+                                    </div>
+
+                                    <a href="https://github.com/LobeliaSecurity/BlueFox"
+                                        target="_blank">https://github.com/LobeliaSecurity/BlueFox</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="Products2"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">Lightweight Live patch</h2>
+                                        <p class="uk-text-meta">Lightweight, rapidly deployable live patch library.</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/PhantomLilithv0.png" width="250">
+                                        </div>
+                                        <p>
+                                        <div>
+                                            Windows-64bit user mode debugger using Python standard library and libraries
+                                            written purely in Python.
+                                        </div>
+                                        <div>
+                                            Our desire is to avoid messing up the development environment , without
+                                            requiring a build for quick changes, Easy to Setup, Easy to Share, Avoid
+                                            being detected by Windows Defender as much as possible for work.
+                                            And importantly, sysadmins usually don't care about having Python installed
+                                            on your work computer.
+                                        </div>
+                                        </p>
+                                    </div>
+
+                                    <a href="https://github.com/LobeliaSecurity/PhantomLilith"
+                                        target="_blank">https://github.com/LobeliaSecurity/PhantomLilith</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="Products3"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">Python3 Lightweight Web Server</h2>
+                                        <p class="uk-text-meta">Lightweight, rapidly deployable web server.</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/nova.png" width="250">
+                                        </div>
+                                        <p>
+                                            Nova is an ordinary framework written in Python 3.9 for common and ordinary
+                                            web applications.
+                                            It is based on asynchronous processing (Async), which has become a standard
+                                            nowadays, and on-memory static contents such as Html, CSS, and images.　
+                                            WebSockets can be easily used, and the code is easy to understand and highly
+                                            flexible. We don't use strange decorators for mapping, and we gather the
+                                            methods together at the end in the server part. It is easy to divide the
+                                            code by function without having to think about anything in particular, and
+                                            development in teams will proceed smoothly.
+                                            The included TCP proxy helps them use external services as if they were
+                                            their own.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div showWhenSome="#menuControll" showWhenSome-values='["Company"]'>
+                <div class="uk-animation-slide-top-small">
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+                            <div eye-catch="Company"></div>
+                        </div>
+                        <div class="uk-margin-remove-top">
+                            <div class="uk-section uk-section-small uk-light bg-1 ">
+                                <div class="uk-container uk-container-large">
+                                    <div>
+                                        <h2 class="uk-heading-bullet">LobeliaSecurity™ by Eve.Familia, inc.</h2>
+                                        <p class="uk-text-meta">Delaware.US.Earth.SolarSystem</p>
+                                    </div>
+                                    <div>
+                                        <div class="uk-text-center">
+                                            <img class="pol" async-src="/media/efi.png" width="250">
+
+                                        </div>
+                                        <p>
+                                            Eve.Familia, inc. is an amazingly awesome IT-company based out of the Earth.
+                                            We're different, we're easy,
+                                            and we're affordable.
+                                            Use us, you won't be sorry.
+                                            If you don't use us we'll be sad, but we'll still love you!
+                                        </p>
+                                    </div>
+                                    <div>
+                                        Photo by <a target="_blank"
+                                            href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NASA</a>
+                                        on <a target="_blank"
+                                            href="https://unsplash.com/photos/gyp1xkjZNg8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+
+            <div id="border">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="uk-padding-small">
+
+                <div class="uk-flex uk-flex-middle uk-padding-small">
+                    <div class=" uk-margin-small-right">
+                        <img async-src="/media/logo.png" width="25" height="25">
+                    </div>
+                    <div class=" uk-margin-small-right">
+                        <div>(c) LobeliaSecurity™ by Eve.Familia, inc.</div>
+                    </div>
+                    <div class=" uk-margin-small-right">
+                        <a href="https://github.com/LobeliaSecurity" target="_blank" class="uk-icon-button"
+                            uk-icon="github"></a>
+                    </div>
+                    <div class=" uk-margin-small-right">
+                        <a href="https://twitter.com/LobeliaSecurity" target="_blank" class="uk-icon-button"
+                            uk-icon="twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
