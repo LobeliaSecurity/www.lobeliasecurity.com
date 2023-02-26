@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- UIkit -->
+    <link rel="stylesheet" href="/modules/uikit/css/uikit.min.css" />
+    <script src="/modules/uikit/js/uikit.min.js" defer></script>
+    <script src="/modules/uikit/js/uikit-icons.min.js" defer></script>
+</head>
+
+<body>
+
+    <div class="uk-section uk-section-small">
+        <div class="uk-container uk-container-small">
+            <form class="uk-form-stacked">
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee1</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName1">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName1"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName1">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName1"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From1">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From1"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To1">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To1"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age1">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age1" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location1">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location1">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee2</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName2">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName2"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName2">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName2"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From2">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From2"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To2">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To2"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age2">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age2" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location2">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location2">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee3</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName3">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName3"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName3">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName3"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From3">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From3"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To3">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To3"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age3">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age3" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location3">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location3">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee4</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName4">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName4"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName4">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName4"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From4">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From4"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To4">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To4"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age4">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age4" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location4">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location4">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee5</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName5">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName5"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName5">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName5"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From5">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From5"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To5">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To5"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age5">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age5" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location5">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location5">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee6</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName6">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName6"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName6">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName6"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From6">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From6"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To6">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To6"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age6">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age6" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location6">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location6">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee7</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName7">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName7"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName7">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName7"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From7">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From7"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To7">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To7"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age7">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age7" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location7">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location7">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee8</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName8">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName8"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName8">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName8"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From8">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From8"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To8">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To8"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age8">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age8" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location8">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location8">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee9</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName9">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName9"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName9">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName9"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From9">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From9"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To9">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To9"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age9">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age9" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location9">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location9">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-margin">
+                    <h3 class="uk-heading-bullet">Attendee10</h3>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="FirstName10">FirstName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="FirstName10"
+                                    type="text">
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="LastName10">LastName</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="LastName10"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-controls uk-flex">
+                            <div class="uk-margin-right">
+                                <label class="uk-form-label" for="From10">From</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="From10"
+                                    type="text">
+                            </div>
+                            <div>
+                                <span class="uk-margin-right">～</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="To10">To</label>
+                                <input pattern="[A-z]*" required class="uk-input uk-form-width-medium" id="To10"
+                                    type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Age10">Age</label>
+                        <input required min="0" class="uk-input uk-form-width-small" id="Age10" type="number">
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="Location10">Location</label>
+                        <div class="uk-form-controls">
+                            <select required class="uk-select" id="Location10">
+                                <option></option>
+                                <option>Mercury</option>
+                                <option>Venus</option>
+                                <option>Earth</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Uranus</option>
+                                <option>Neptune</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
